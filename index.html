@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aasan Hindi Quran</title>
+<meta name="description" content="Aasan Hindi Quran — Quran ko Hindi mein aasani se padhne aur samajhne ke liye.">
+<style>
+:root{--bg:#f7faf8;--card:#fff;--text:#17352a;--muted:#65766e;--accent:#16845b;--soft:#e7f4ed}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,sans-serif;background:var(--bg);color:var(--text)}
+header{background:linear-gradient(135deg,#0e6548,#1b9569);color:white;padding:42px 20px;text-align:center}
+header h1{margin:0 0 8px;font-size:36px}header p{margin:0;opacity:.92}
+main{max-width:1000px;margin:auto;padding:24px 16px}
+.search{width:100%;padding:15px 17px;border:1px solid #d5e2dc;border-radius:14px;font-size:16px;outline:none;background:white}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:20px}
+.card{background:var(--card);border:1px solid #e0e9e4;border-radius:16px;padding:20px;box-shadow:0 3px 12px #17352a0b}
+.card h2{margin:0 0 6px;font-size:20px}.card p{margin:0;color:var(--muted)}
+.badge{display:inline-block;background:var(--soft);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:12px;margin-bottom:12px}
+section{margin-top:30px}.section-title{font-size:25px;margin-bottom:12px}
+footer{text-align:center;color:var(--muted);padding:35px 16px}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<header>
+  <h1>آسان ہندی قرآن</h1>
+  <p>Aasan Hindi Quran</p>
+  <p style="margin-top:10px;font-size:14px">Quran ko padhne, samajhne aur yaad rakhne mein aasani ke liye</p>
+</header>
+
+<main>
+  <section>
+    <input id="search" class="search" type="search" placeholder="Surah ka naam search karein...">
+  </section>
+
+  <section>
+    <div class="section-title">📖 Quran Kareem</div>
+    <div id="surahGrid" class="grid"></div>
+  </section>
+
+  <section class="grid">
+    <div class="card"><span class="badge">Jald aa raha hai</span><h2>🔊 Quran Audio</h2><p>Tilawat sunne ka section.</p></div>
+    <div class="card"><span class="badge">Jald aa raha hai</span><h2>🌐 Hindi / Urdu / English</h2><p>Translations ko dheere-dheere add kiya jayega.</p></div>
+    <div class="card"><span class="badge">Jald aa raha hai</span><h2>🤲 Dua & Azkar</h2><p>Rozmarra ki masnoon duaein aur azkar.</p></div>
+  </section>
+</main>
+
+<footer>
+  <p>❤️ Allah ki raza ke liye — Aasan Hindi Quran</p>
+  <p style="font-size:13px">Quran text add karte waqt verified source se proofreading zaroor karein.</p>
+</footer>
+
+<script>
+const surahs = [
+["1","Al-Fatiha","الفاتحة"],["2","Al-Baqarah","البقرة"],["3","Aal-e-Imran","آل عمران"],
+["4","An-Nisa","النساء"],["5","Al-Ma'idah","المائدة"],["6","Al-An'am","الأنعام"],
+["7","Al-A'raf","الأعراف"],["8","Al-Anfal","الأنفال"],["9","At-Tawbah","التوبة"],
+["10","Yunus","يونس"],["11","Hud","هود"],["12","Yusuf","يوسف"],
+["13","Ar-Ra'd","الرعد"],["14","Ibrahim","إبراهيم"],["15","Al-Hijr","الحجر"],
+["16","An-Nahl","النحل"],["17","Al-Isra","الإسراء"],["18","Al-Kahf","الكهف"],
+["19","Maryam","مريم"],["20","Ta-Ha","طه"],["21","Al-Anbiya","الأنبياء"],
+["22","Al-Hajj","الحج"],["23","Al-Mu'minun","المؤمنون"],["24","An-Nur","النور"],
+["25","Al-Furqan","الفرقان"],["26","Ash-Shu'ara","الشعراء"],["27","An-Naml","النمل"],
+["28","Al-Qasas","القصص"],["29","Al-Ankabut","العنكبوت"],["30","Ar-Rum","الروم"],
+["31","Luqman","لقمان"],["32","As-Sajdah","السجدة"],["33","Al-Ahzab","الأحزاب"],
+["34","Saba","سبأ"],["35","Fatir","فاطر"],["36","Ya-Sin","يس"],
+["37","As-Saffat","الصافات"],["38","Sad","ص"],["39","Az-Zumar","الزمر"],
+["40","Ghafir","غافر"],["41","Fussilat","فصلت"],["42","Ash-Shura","الشورى"],
+["43","Az-Zukhruf","الزخرف"],["44","Ad-Dukhan","الدخان"],["45","Al-Jathiyah","الجاثية"],
+["46","Al-Ahqaf","الأحقاف"],["47","Muhammad","محمد"],["48","Al-Fath","الفتح"],
+["49","Al-Hujurat","الحجرات"],["50","Qaf","ق"],["51","Adh-Dhariyat","الذاريات"],
+["52","At-Tur","الطور"],["53","An-Najm","النجم"],["54","Al-Qamar","القمر"],
+["55","Ar-Rahman","الرحمن"],["56","Al-Waqi'ah","الواقعة"],["57","Al-Hadid","الحديد"],
+["58","Al-Mujadilah","المجادلة"],["59","Al-Hashr","الحشر"],["60","Al-Mumtahanah","الممتحنة"],
+["61","As-Saff","الصف"],["62","Al-Jumu'ah","الجمعة"],["63","Al-Munafiqun","المنافقون"],
+["64","At-Taghabun","التغابن"],["65","At-Talaq","الطلاق"],["66","At-Tahrim","التحريم"],
+["67","Al-Mulk","الملك"],["68","Al-Qalam","القلم"],["69","Al-Haqqah","الحاقة"],
+["70","Al-Ma'arij","المعارج"],["71","Nuh","نوح"],["72","Al-Jinn","الجن"],
+["73","Al-Muzzammil","المزمل"],["74","Al-Muddaththir","المدثر"],["75","Al-Qiyamah","القيامة"],
+["76","Al-Insan","الإنسان"],["77","Al-Mursalat","المرسلات"],["78","An-Naba","النبأ"],
+["79","An-Nazi'at","النازعات"],["80","Abasa","عبس"],["81","At-Takwir","التكوير"],
+["82","Al-Infitar","الانفطار"],["83","Al-Mutaffifin","المطففين"],["84","Al-Inshiqaq","الانشقاق"],
+["85","Al-Buruj","البروج"],["86","At-Tariq","الطارق"],["87","Al-A'la","الأعلى"],
+["88","Al-Ghashiyah","الغاشية"],["89","Al-Fajr","الفجر"],["90","Al-Balad","البلد"],
+["91","Ash-Shams","الشمس"],["92","Al-Layl","الليل"],["93","Ad-Duha","الضحى"],
+["94","Ash-Sharh","الشرح"],["95","At-Tin","التين"],["96","Al-Alaq","العلق"],
+["97","Al-Qadr","القدر"],["98","Al-Bayyinah","البينة"],["99","Az-Zalzalah","الزلزلة"],
+["100","Al-Adiyat","العاديات"],["101","Al-Qari'ah","القارعة"],["102","At-Takathur","التكاثر"],
+["103","Al-Asr","العصر"],["104","Al-Humazah","الهمزة"],["105","Al-Fil","الفيل"],
+["106","Quraysh","قريش"],["107","Al-Ma'un","الماعون"],["108","Al-Kawthar","الكوثر"],
+["109","Al-Kafirun","الكافرون"],["110","An-Nasr","النصر"],["111","Al-Masad","المسد"],
+["112","Al-Ikhlas","الإخلاص"],["113","Al-Falaq","الفلق"],["114","An-Nas","الناس"]
+];
+const grid=document.getElementById("surahGrid");
+function render(q=""){
+  grid.innerHTML="";
+  surahs.filter(s=>s[1].toLowerCase().includes(q.toLowerCase())||s[2].includes(q)||s[0]===q)
+  .forEach(s=>{
+    const d=document.createElement("div"); d.className="card";
+    d.innerHTML=`<span class="badge">Surah ${s[0]}</span><h2>${s[1]}</h2><p style="font-size:22px;direction:rtl;margin-top:8px">${s[2]}</p>`;
+    grid.appendChild(d);
+  });
+}
+document.getElementById("search").addEventListener("input",e=>render(e.target.value));
+render();
+</script>
+</body>
+</html>
