@@ -1,108 +1,160 @@
 <!doctype html>
 <html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aasan Hindi Quran</title>
-<meta name="description" content="Aasan Hindi Quran — Quran ko Hindi mein aasani se padhne aur samajhne ke liye.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aasan Hindi Quran – Quran Hindi Mein Padhein</title>
+<meta name="description" content="Aasan Hindi Quran par Quran Kareem ko aasani se padhein. Arabic Quran, simple Hindi meaning, Tilawat, Dua aur Azkar — sab ek jagah.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://azharpasha72.github.io/AasanHindiQuran/">
+<meta property="og:title" content="Aasan Hindi Quran – Quran Hindi Mein Padhein">
+<meta property="og:description" content="Quran Kareem ko aasani se padhne aur samajhne ke liye.">
+<meta property="og:type" content="website"><meta property="og:url" content="https://azharpasha72.github.io/AasanHindiQuran/">
 <style>
-:root{--bg:#f7faf8;--card:#fff;--text:#17352a;--muted:#65766e;--accent:#16845b;--soft:#e7f4ed}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,sans-serif;background:var(--bg);color:var(--text)}
-header{background:linear-gradient(135deg,#0e6548,#1b9569);color:white;padding:42px 20px;text-align:center}
-header h1{margin:0 0 8px;font-size:36px}header p{margin:0;opacity:.92}
-main{max-width:1000px;margin:auto;padding:24px 16px}
-.search{width:100%;padding:15px 17px;border:1px solid #d5e2dc;border-radius:14px;font-size:16px;outline:none;background:white}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:20px}
-.card{background:var(--card);border:1px solid #e0e9e4;border-radius:16px;padding:20px;box-shadow:0 3px 12px #17352a0b}
-.card h2{margin:0 0 6px;font-size:20px}.card p{margin:0;color:var(--muted)}
-.badge{display:inline-block;background:var(--soft);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:12px;margin-bottom:12px}
-section{margin-top:30px}.section-title{font-size:25px;margin-bottom:12px}
-footer{text-align:center;color:var(--muted);padding:35px 16px}
-.hidden{display:none}
-</style>
-</head>
+:root{--green:#075c43;--green2:#0d7b58;--mint:#e9f6ef;--cream:#fbfaf4;--ink:#17352a;--muted:#718078}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif}a{color:inherit}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#064c39,#0d7957 58%,#07543f);color:#fff;padding:20px 18px 72px}
+.hero:before{content:"☾";position:absolute;right:7%;top:-25px;font-size:180px;color:#ffffff12;transform:rotate(-12deg)}
+.hero:after{content:"✦  ✧  ✦";position:absolute;left:7%;bottom:30px;color:#f2d88a55;font-size:30px;letter-spacing:12px}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:15px;position:relative;z-index:2}
+.brand{font-weight:800;font-size:20px}.brand small{display:block;font-size:11px;font-weight:500;opacity:.8}.nav-pill{padding:9px 14px;border:1px solid #ffffff30;border-radius:999px;background:#ffffff10;font-size:13px}
+.hero-content{max-width:850px;margin:55px auto 0;text-align:center;position:relative;z-index:2}.bismillah{font-size:27px;font-family:serif;color:#f7dfa0;margin-bottom:16px}
+.hero h1{font-size:clamp(34px,7vw,58px);margin:0 0 10px;line-height:1.08}.hero p{font-size:17px;line-height:1.7;max-width:650px;margin:0 auto;color:#e7f3ee}
+.search-wrap{max-width:760px;margin:-30px auto 0;position:relative;z-index:5;padding:0 16px}.search{width:100%;padding:17px 20px;border:0;border-radius:18px;box-shadow:0 12px 35px #17352a20;font-size:16px;outline:none;background:#fff;color:var(--ink)}
+.container{max-width:1100px;margin:auto;padding:25px 16px 55px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:30px 0 15px}.section-head h2{margin:0;font-size:27px}.section-head p{margin:0;color:var(--muted);font-size:14px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 35px}.feature{background:#fff;border:1px solid #e4ebe7;border-radius:18px;padding:20px;box-shadow:0 5px 20px #17352a08}.feature .icon{font-size:27px;margin-bottom:9px}.feature h3{margin:0 0 5px;font-size:18px}.feature p{margin:0;color:var(--muted);line-height:1.6;font-size:14px}
+.surah-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.surah-card{display:flex;align-items:center;gap:13px;background:#fff;border:1px solid #e3ebe6;border-radius:16px;padding:14px;text-decoration:none;transition:.18s;min-height:80px}.surah-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px #17352a12;border-color:#b8d8c8}
+.num{width:39px;height:39px;flex:0 0 39px;display:grid;place-items:center;background:var(--mint);color:var(--green2);border-radius:12px;font-weight:800;font-size:13px}.surah-name{font-weight:750;font-size:16px}.arabic{font-family:serif;font-size:20px;direction:rtl;color:var(--green2);margin-top:3px}.arrow{margin-left:auto;color:#9aa9a2;font-size:25px}.empty{display:none;text-align:center;padding:30px;color:var(--muted)}
+.quote{margin:35px 0 0;background:linear-gradient(135deg,#f1ead3,#fffaf0);border:1px solid #eadfbf;border-radius:20px;padding:25px;text-align:center}.quote .arabic-big{font-family:serif;font-size:30px;direction:rtl;color:#745c26;margin-bottom:8px}.quote p{margin:0;color:#6d644f;line-height:1.7}
+footer{background:#083f30;color:#d8e9e2;text-align:center;padding:35px 16px}footer strong{color:#f1d98d}
+@media(max-width:800px){.features{grid-template-columns:1fr}.surah-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.hero{padding-bottom:60px}.nav-pill{display:none}.surah-grid{grid-template-columns:1fr}.hero h1{font-size:38px}.bismillah{font-size:23px}}
+</style></head>
 <body>
-<header>
-  <h1>آسان ہندی قرآن</h1>
-  <p>Aasan Hindi Quran</p>
-  <p style="margin-top:10px;font-size:14px">Quran ko padhne, samajhne aur yaad rakhne mein aasani ke liye</p>
-</header>
-
-<main>
-  <section>
-    <input id="search" class="search" type="search" placeholder="Surah ka naam search karein...">
-  </section>
-
-  <section>
-    <div class="section-title">📖 Quran Kareem</div>
-    <div id="surahGrid" class="grid"></div>
-  </section>
-
-  <section class="grid">
-    <div class="card"><span class="badge">Jald aa raha hai</span><h2>🔊 Quran Audio</h2><p>Tilawat sunne ka section.</p></div>
-    <div class="card"><span class="badge">Jald aa raha hai</span><h2>🌐 Hindi / Urdu / English</h2><p>Translations ko dheere-dheere add kiya jayega.</p></div>
-    <div class="card"><span class="badge">Jald aa raha hai</span><h2>🤲 Dua & Azkar</h2><p>Rozmarra ki masnoon duaein aur azkar.</p></div>
-  </section>
+<header class="hero"><nav class="nav"><div class="brand">☾ Aasan Hindi Quran<small>Quran • Samajh • Amal</small></div><div class="nav-pill">📖 114 Surah</div></nav>
+<div class="hero-content"><div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div><h1>Aasan Hindi Quran</h1><p>Quran Kareem ko aasani se padhne aur samajhne ke liye — Arabic Quran aur simple Hindi meaning ke saath.</p></div></header>
+<div class="search-wrap"><input id="search" class="search" type="search" placeholder="🔎 Surah ka naam ya number search karein..." aria-label="Surah search"></div>
+<main class="container">
+<section class="features"><div class="feature"><div class="icon">📖</div><h3>Quran Kareem</h3><p>114 Surah ko ek simple aur clean layout mein padhein.</p></div><div class="feature"><div class="icon">🌙</div><h3>Aasan Samajh</h3><p>Simple Hindi meaning ke zariye Quran ko samajhne ki koshish.</p></div><div class="feature"><div class="icon">🤲</div><h3>Dua & Azkar</h3><p>Dua, Azkar aur Islamic content dheere-dheere add kiya jayega.</p></div></section>
+<div class="section-head"><div><h2>📚 Quran Kareem</h2><p>114 Surah — Al-Fatiha ka page abhi available hai</p></div></div>
+<section id="surahGrid" class="surah-grid">
+<a class="surah-card" data-name="al-fatiha الفاتحة 1" href="surah-al-fatiha.html"><span class="num">1</span><div><div class="surah-name">Al-Fatiha</div><div class="arabic">الفاتحة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-baqarah البقرة 2" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">2</span><div><div class="surah-name">Al-Baqarah</div><div class="arabic">البقرة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="aal-e-imran آل عمران 3" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">3</span><div><div class="surah-name">Aal-e-Imran</div><div class="arabic">آل عمران</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="an-nisa النساء 4" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">4</span><div><div class="surah-name">An-Nisa</div><div class="arabic">النساء</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-ma'idah المائدة 5" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">5</span><div><div class="surah-name">Al-Ma'idah</div><div class="arabic">المائدة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-an'am الأنعام 6" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">6</span><div><div class="surah-name">Al-An'am</div><div class="arabic">الأنعام</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-a'raf الأعراف 7" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">7</span><div><div class="surah-name">Al-A'raf</div><div class="arabic">الأعراف</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-anfal الأنفال 8" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">8</span><div><div class="surah-name">Al-Anfal</div><div class="arabic">الأنفال</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="at-tawbah التوبة 9" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">9</span><div><div class="surah-name">At-Tawbah</div><div class="arabic">التوبة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="yunus يونس 10" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">10</span><div><div class="surah-name">Yunus</div><div class="arabic">يونس</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="hud هود 11" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">11</span><div><div class="surah-name">Hud</div><div class="arabic">هود</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="yusuf يوسف 12" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">12</span><div><div class="surah-name">Yusuf</div><div class="arabic">يوسف</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ar-ra'd الرعد 13" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">13</span><div><div class="surah-name">Ar-Ra'd</div><div class="arabic">الرعد</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ibrahim إبراهيم 14" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">14</span><div><div class="surah-name">Ibrahim</div><div class="arabic">إبراهيم</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-hijr الحجر 15" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">15</span><div><div class="surah-name">Al-Hijr</div><div class="arabic">الحجر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="an-nahl النحل 16" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">16</span><div><div class="surah-name">An-Nahl</div><div class="arabic">النحل</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-isra الإسراء 17" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">17</span><div><div class="surah-name">Al-Isra</div><div class="arabic">الإسراء</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-kahf الكهف 18" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">18</span><div><div class="surah-name">Al-Kahf</div><div class="arabic">الكهف</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="maryam مريم 19" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">19</span><div><div class="surah-name">Maryam</div><div class="arabic">مريم</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ta-ha طه 20" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">20</span><div><div class="surah-name">Ta-Ha</div><div class="arabic">طه</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-anbiya الأنبياء 21" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">21</span><div><div class="surah-name">Al-Anbiya</div><div class="arabic">الأنبياء</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-hajj الحج 22" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">22</span><div><div class="surah-name">Al-Hajj</div><div class="arabic">الحج</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-mu'minun المؤمنون 23" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">23</span><div><div class="surah-name">Al-Mu'minun</div><div class="arabic">المؤمنون</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="an-nur النور 24" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">24</span><div><div class="surah-name">An-Nur</div><div class="arabic">النور</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-furqan الفرقان 25" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">25</span><div><div class="surah-name">Al-Furqan</div><div class="arabic">الفرقان</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ash-shu'ara الشعراء 26" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">26</span><div><div class="surah-name">Ash-Shu'ara</div><div class="arabic">الشعراء</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="an-naml النمل 27" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">27</span><div><div class="surah-name">An-Naml</div><div class="arabic">النمل</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-qasas القصص 28" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">28</span><div><div class="surah-name">Al-Qasas</div><div class="arabic">القصص</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-ankabut العنكبوت 29" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">29</span><div><div class="surah-name">Al-Ankabut</div><div class="arabic">العنكبوت</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ar-rum الروم 30" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">30</span><div><div class="surah-name">Ar-Rum</div><div class="arabic">الروم</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="luqman لقمان 31" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">31</span><div><div class="surah-name">Luqman</div><div class="arabic">لقمان</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="as-sajdah السجدة 32" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">32</span><div><div class="surah-name">As-Sajdah</div><div class="arabic">السجدة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-ahzab الأحزاب 33" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">33</span><div><div class="surah-name">Al-Ahzab</div><div class="arabic">الأحزاب</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="saba سبأ 34" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">34</span><div><div class="surah-name">Saba</div><div class="arabic">سبأ</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="fatir فاطر 35" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">35</span><div><div class="surah-name">Fatir</div><div class="arabic">فاطر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ya-sin يس 36" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">36</span><div><div class="surah-name">Ya-Sin</div><div class="arabic">يس</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="as-saffat الصافات 37" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">37</span><div><div class="surah-name">As-Saffat</div><div class="arabic">الصافات</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="sad ص 38" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">38</span><div><div class="surah-name">Sad</div><div class="arabic">ص</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="az-zumar الزمر 39" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">39</span><div><div class="surah-name">Az-Zumar</div><div class="arabic">الزمر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ghafir غافر 40" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">40</span><div><div class="surah-name">Ghafir</div><div class="arabic">غافر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="fussilat فصلت 41" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">41</span><div><div class="surah-name">Fussilat</div><div class="arabic">فصلت</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ash-shura الشورى 42" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">42</span><div><div class="surah-name">Ash-Shura</div><div class="arabic">الشورى</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="az-zukhruf الزخرف 43" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">43</span><div><div class="surah-name">Az-Zukhruf</div><div class="arabic">الزخرف</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ad-dukhan الدخان 44" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">44</span><div><div class="surah-name">Ad-Dukhan</div><div class="arabic">الدخان</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-jathiyah الجاثية 45" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">45</span><div><div class="surah-name">Al-Jathiyah</div><div class="arabic">الجاثية</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-ahqaf الأحقاف 46" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">46</span><div><div class="surah-name">Al-Ahqaf</div><div class="arabic">الأحقاف</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="muhammad محمد 47" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">47</span><div><div class="surah-name">Muhammad</div><div class="arabic">محمد</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-fath الفتح 48" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">48</span><div><div class="surah-name">Al-Fath</div><div class="arabic">الفتح</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-hujurat الحجرات 49" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">49</span><div><div class="surah-name">Al-Hujurat</div><div class="arabic">الحجرات</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="qaf ق 50" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">50</span><div><div class="surah-name">Qaf</div><div class="arabic">ق</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="adh-dhariyat الذاريات 51" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">51</span><div><div class="surah-name">Adh-Dhariyat</div><div class="arabic">الذاريات</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="at-tur الطور 52" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">52</span><div><div class="surah-name">At-Tur</div><div class="arabic">الطور</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="an-najm النجم 53" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">53</span><div><div class="surah-name">An-Najm</div><div class="arabic">النجم</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-qamar القمر 54" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">54</span><div><div class="surah-name">Al-Qamar</div><div class="arabic">القمر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ar-rahman الرحمن 55" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">55</span><div><div class="surah-name">Ar-Rahman</div><div class="arabic">الرحمن</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-waqi'ah الواقعة 56" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">56</span><div><div class="surah-name">Al-Waqi'ah</div><div class="arabic">الواقعة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-hadid الحديد 57" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">57</span><div><div class="surah-name">Al-Hadid</div><div class="arabic">الحديد</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-mujadilah المجادلة 58" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">58</span><div><div class="surah-name">Al-Mujadilah</div><div class="arabic">المجادلة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-hashr الحشر 59" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">59</span><div><div class="surah-name">Al-Hashr</div><div class="arabic">الحشر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-mumtahanah الممتحنة 60" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">60</span><div><div class="surah-name">Al-Mumtahanah</div><div class="arabic">الممتحنة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="as-saff الصف 61" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">61</span><div><div class="surah-name">As-Saff</div><div class="arabic">الصف</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-jumu'ah الجمعة 62" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">62</span><div><div class="surah-name">Al-Jumu'ah</div><div class="arabic">الجمعة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-munafiqun المنافقون 63" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">63</span><div><div class="surah-name">Al-Munafiqun</div><div class="arabic">المنافقون</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="at-taghabun التغابن 64" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">64</span><div><div class="surah-name">At-Taghabun</div><div class="arabic">التغابن</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="at-talaq الطلاق 65" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">65</span><div><div class="surah-name">At-Talaq</div><div class="arabic">الطلاق</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="at-tahrim التحريم 66" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">66</span><div><div class="surah-name">At-Tahrim</div><div class="arabic">التحريم</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-mulk الملك 67" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">67</span><div><div class="surah-name">Al-Mulk</div><div class="arabic">الملك</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-qalam القلم 68" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">68</span><div><div class="surah-name">Al-Qalam</div><div class="arabic">القلم</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-haqqah الحاقة 69" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">69</span><div><div class="surah-name">Al-Haqqah</div><div class="arabic">الحاقة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-ma'arij المعارج 70" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">70</span><div><div class="surah-name">Al-Ma'arij</div><div class="arabic">المعارج</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="nuh نوح 71" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">71</span><div><div class="surah-name">Nuh</div><div class="arabic">نوح</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-jinn الجن 72" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">72</span><div><div class="surah-name">Al-Jinn</div><div class="arabic">الجن</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-muzzammil المزمل 73" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">73</span><div><div class="surah-name">Al-Muzzammil</div><div class="arabic">المزمل</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-muddaththir المدثر 74" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">74</span><div><div class="surah-name">Al-Muddaththir</div><div class="arabic">المدثر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-qiyamah القيامة 75" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">75</span><div><div class="surah-name">Al-Qiyamah</div><div class="arabic">القيامة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-insan الإنسان 76" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">76</span><div><div class="surah-name">Al-Insan</div><div class="arabic">الإنسان</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-mursalat المرسلات 77" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">77</span><div><div class="surah-name">Al-Mursalat</div><div class="arabic">المرسلات</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="an-naba النبأ 78" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">78</span><div><div class="surah-name">An-Naba</div><div class="arabic">النبأ</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="an-nazi'at النازعات 79" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">79</span><div><div class="surah-name">An-Nazi'at</div><div class="arabic">النازعات</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="abasa عبس 80" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">80</span><div><div class="surah-name">Abasa</div><div class="arabic">عبس</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="at-takwir التكوير 81" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">81</span><div><div class="surah-name">At-Takwir</div><div class="arabic">التكوير</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-infitar الانفطار 82" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">82</span><div><div class="surah-name">Al-Infitar</div><div class="arabic">الانفطار</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-mutaffifin المطففين 83" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">83</span><div><div class="surah-name">Al-Mutaffifin</div><div class="arabic">المطففين</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-inshiqaq الانشقاق 84" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">84</span><div><div class="surah-name">Al-Inshiqaq</div><div class="arabic">الانشقاق</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-buruj البروج 85" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">85</span><div><div class="surah-name">Al-Buruj</div><div class="arabic">البروج</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="at-tariq الطارق 86" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">86</span><div><div class="surah-name">At-Tariq</div><div class="arabic">الطارق</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-a'la الأعلى 87" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">87</span><div><div class="surah-name">Al-A'la</div><div class="arabic">الأعلى</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-ghashiyah الغاشية 88" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">88</span><div><div class="surah-name">Al-Ghashiyah</div><div class="arabic">الغاشية</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-fajr الفجر 89" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">89</span><div><div class="surah-name">Al-Fajr</div><div class="arabic">الفجر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-balad البلد 90" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">90</span><div><div class="surah-name">Al-Balad</div><div class="arabic">البلد</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ash-shams الشمس 91" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">91</span><div><div class="surah-name">Ash-Shams</div><div class="arabic">الشمس</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-layl الليل 92" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">92</span><div><div class="surah-name">Al-Layl</div><div class="arabic">الليل</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ad-duha الضحى 93" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">93</span><div><div class="surah-name">Ad-Duha</div><div class="arabic">الضحى</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="ash-sharh الشرح 94" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">94</span><div><div class="surah-name">Ash-Sharh</div><div class="arabic">الشرح</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="at-tin التين 95" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">95</span><div><div class="surah-name">At-Tin</div><div class="arabic">التين</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-alaq العلق 96" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">96</span><div><div class="surah-name">Al-Alaq</div><div class="arabic">العلق</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-qadr القدر 97" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">97</span><div><div class="surah-name">Al-Qadr</div><div class="arabic">القدر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-bayyinah البينة 98" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">98</span><div><div class="surah-name">Al-Bayyinah</div><div class="arabic">البينة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="az-zalzalah الزلزلة 99" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">99</span><div><div class="surah-name">Az-Zalzalah</div><div class="arabic">الزلزلة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-adiyat العاديات 100" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">100</span><div><div class="surah-name">Al-Adiyat</div><div class="arabic">العاديات</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-qari'ah القارعة 101" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">101</span><div><div class="surah-name">Al-Qari'ah</div><div class="arabic">القارعة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="at-takathur التكاثر 102" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">102</span><div><div class="surah-name">At-Takathur</div><div class="arabic">التكاثر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-asr العصر 103" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">103</span><div><div class="surah-name">Al-Asr</div><div class="arabic">العصر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-humazah الهمزة 104" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">104</span><div><div class="surah-name">Al-Humazah</div><div class="arabic">الهمزة</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-fil الفيل 105" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">105</span><div><div class="surah-name">Al-Fil</div><div class="arabic">الفيل</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="quraysh قريش 106" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">106</span><div><div class="surah-name">Quraysh</div><div class="arabic">قريش</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-ma'un الماعون 107" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">107</span><div><div class="surah-name">Al-Ma'un</div><div class="arabic">الماعون</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-kawthar الكوثر 108" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">108</span><div><div class="surah-name">Al-Kawthar</div><div class="arabic">الكوثر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-kafirun الكافرون 109" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">109</span><div><div class="surah-name">Al-Kafirun</div><div class="arabic">الكافرون</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="an-nasr النصر 110" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">110</span><div><div class="surah-name">An-Nasr</div><div class="arabic">النصر</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-masad المسد 111" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">111</span><div><div class="surah-name">Al-Masad</div><div class="arabic">المسد</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-ikhlas الإخلاص 112" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">112</span><div><div class="surah-name">Al-Ikhlas</div><div class="arabic">الإخلاص</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="al-falaq الفلق 113" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">113</span><div><div class="surah-name">Al-Falaq</div><div class="arabic">الفلق</div></div><span class="arrow">›</span></a>
+<a class="surah-card" data-name="an-nas الناس 114" href="#" onclick="event.preventDefault(); alert('Is Surah ka page hum jald add karenge.');"><span class="num">114</span><div><div class="surah-name">An-Nas</div><div class="arabic">الناس</div></div><span class="arrow">›</span></a>
+</section><div id="empty" class="empty">Koi Surah nahi mili. Naam ya number dobara check karein.</div>
+<section class="quote"><div class="arabic-big">رَبِّ زِدْنِي عِلْمًا</div><p>“ऐ मेरे रब! मेरे ज्ञान में वृद्धि कर।”</p></section>
 </main>
-
-<footer>
-  <p>❤️ Allah ki raza ke liye — Aasan Hindi Quran</p>
-  <p style="font-size:13px">Quran text add karte waqt verified source se proofreading zaroor karein.</p>
-</footer>
-
+<footer><div style="font-size:24px;margin-bottom:8px">☾ ✦ 📖 ✦ ☽</div><strong>Aasan Hindi Quran</strong><p style="margin:8px 0 0">❤️ Allah ki raza ke liye • Website Design by Azhar</p></footer>
 <script>
-const surahs = [
-["1","Al-Fatiha","الفاتحة"],["2","Al-Baqarah","البقرة"],["3","Aal-e-Imran","آل عمران"],
-["4","An-Nisa","النساء"],["5","Al-Ma'idah","المائدة"],["6","Al-An'am","الأنعام"],
-["7","Al-A'raf","الأعراف"],["8","Al-Anfal","الأنفال"],["9","At-Tawbah","التوبة"],
-["10","Yunus","يونس"],["11","Hud","هود"],["12","Yusuf","يوسف"],
-["13","Ar-Ra'd","الرعد"],["14","Ibrahim","إبراهيم"],["15","Al-Hijr","الحجر"],
-["16","An-Nahl","النحل"],["17","Al-Isra","الإسراء"],["18","Al-Kahf","الكهف"],
-["19","Maryam","مريم"],["20","Ta-Ha","طه"],["21","Al-Anbiya","الأنبياء"],
-["22","Al-Hajj","الحج"],["23","Al-Mu'minun","المؤمنون"],["24","An-Nur","النور"],
-["25","Al-Furqan","الفرقان"],["26","Ash-Shu'ara","الشعراء"],["27","An-Naml","النمل"],
-["28","Al-Qasas","القصص"],["29","Al-Ankabut","العنكبوت"],["30","Ar-Rum","الروم"],
-["31","Luqman","لقمان"],["32","As-Sajdah","السجدة"],["33","Al-Ahzab","الأحزاب"],
-["34","Saba","سبأ"],["35","Fatir","فاطر"],["36","Ya-Sin","يس"],
-["37","As-Saffat","الصافات"],["38","Sad","ص"],["39","Az-Zumar","الزمر"],
-["40","Ghafir","غافر"],["41","Fussilat","فصلت"],["42","Ash-Shura","الشورى"],
-["43","Az-Zukhruf","الزخرف"],["44","Ad-Dukhan","الدخان"],["45","Al-Jathiyah","الجاثية"],
-["46","Al-Ahqaf","الأحقاف"],["47","Muhammad","محمد"],["48","Al-Fath","الفتح"],
-["49","Al-Hujurat","الحجرات"],["50","Qaf","ق"],["51","Adh-Dhariyat","الذاريات"],
-["52","At-Tur","الطور"],["53","An-Najm","النجم"],["54","Al-Qamar","القمر"],
-["55","Ar-Rahman","الرحمن"],["56","Al-Waqi'ah","الواقعة"],["57","Al-Hadid","الحديد"],
-["58","Al-Mujadilah","المجادلة"],["59","Al-Hashr","الحشر"],["60","Al-Mumtahanah","الممتحنة"],
-["61","As-Saff","الصف"],["62","Al-Jumu'ah","الجمعة"],["63","Al-Munafiqun","المنافقون"],
-["64","At-Taghabun","التغابن"],["65","At-Talaq","الطلاق"],["66","At-Tahrim","التحريم"],
-["67","Al-Mulk","الملك"],["68","Al-Qalam","القلم"],["69","Al-Haqqah","الحاقة"],
-["70","Al-Ma'arij","المعارج"],["71","Nuh","نوح"],["72","Al-Jinn","الجن"],
-["73","Al-Muzzammil","المزمل"],["74","Al-Muddaththir","المدثر"],["75","Al-Qiyamah","القيامة"],
-["76","Al-Insan","الإنسان"],["77","Al-Mursalat","المرسلات"],["78","An-Naba","النبأ"],
-["79","An-Nazi'at","النازعات"],["80","Abasa","عبس"],["81","At-Takwir","التكوير"],
-["82","Al-Infitar","الانفطار"],["83","Al-Mutaffifin","المطففين"],["84","Al-Inshiqaq","الانشقاق"],
-["85","Al-Buruj","البروج"],["86","At-Tariq","الطارق"],["87","Al-A'la","الأعلى"],
-["88","Al-Ghashiyah","الغاشية"],["89","Al-Fajr","الفجر"],["90","Al-Balad","البلد"],
-["91","Ash-Shams","الشمس"],["92","Al-Layl","الليل"],["93","Ad-Duha","الضحى"],
-["94","Ash-Sharh","الشرح"],["95","At-Tin","التين"],["96","Al-Alaq","العلق"],
-["97","Al-Qadr","القدر"],["98","Al-Bayyinah","البينة"],["99","Az-Zalzalah","الزلزلة"],
-["100","Al-Adiyat","العاديات"],["101","Al-Qari'ah","القارعة"],["102","At-Takathur","التكاثر"],
-["103","Al-Asr","العصر"],["104","Al-Humazah","الهمزة"],["105","Al-Fil","الفيل"],
-["106","Quraysh","قريش"],["107","Al-Ma'un","الماعون"],["108","Al-Kawthar","الكوثر"],
-["109","Al-Kafirun","الكافرون"],["110","An-Nasr","النصر"],["111","Al-Masad","المسد"],
-["112","Al-Ikhlas","الإخلاص"],["113","Al-Falaq","الفلق"],["114","An-Nas","الناس"]
-];
-const grid=document.getElementById("surahGrid");
-function render(q=""){
-  grid.innerHTML="";
-  surahs.filter(s=>s[1].toLowerCase().includes(q.toLowerCase())||s[2].includes(q)||s[0]===q)
-  .forEach(s=>{
-    const d=document.createElement("div"); d.className="card";
-    d.innerHTML=`<span class="badge">Surah ${s[0]}</span><h2>${s[1]}</h2><p style="font-size:22px;direction:rtl;margin-top:8px">${s[2]}</p>`;
-    grid.appendChild(d);
-  });
-}
-document.getElementById("search").addEventListener("input",e=>render(e.target.value));
-render();
-</script>
-</body>
-</html>
+const input=document.getElementById("search"),cards=[...document.querySelectorAll(".surah-card")],empty=document.getElementById("empty");
+input.addEventListener("input",()=>{const q=input.value.trim().toLowerCase();let shown=0;cards.forEach(c=>{const match=!q||c.dataset.name.includes(q);c.style.display=match?"flex":"none";if(match)shown++});empty.style.display=shown?"none":"block"});
+</script></body></html>
