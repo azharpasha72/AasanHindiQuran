@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Surah Al-Baqarah – Aasan Hindi Quran</title>
+<meta name="description" content="Surah Al-Baqarah ki 286 ayat Arabic Quran aur Hindi translation ke saath. Aasan Hindi Quran.">
+<style>
+:root{--g:#075c43;--g2:#0d7b58;--bg:#fbfaf4;--ink:#17352a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+header{background:linear-gradient(135deg,#064c39,#0d7957);color:#fff;padding:34px 16px 42px;text-align:center}
+.moon{font-size:28px;color:#f3d98e}.bismillah{font-family:serif;font-size:27px;color:#f3d98e;margin:12px 0}
+h1{font-size:34px;margin:0 0 8px}.sub{opacity:.9}.wrap{max-width:900px;margin:auto;padding:22px 15px 55px}
+.back{display:inline-block;color:var(--g2);font-weight:700;text-decoration:none;margin-bottom:18px}
+.info{background:#fff;border:1px solid #e3ebe6;border-radius:18px;padding:20px;text-align:center;box-shadow:0 6px 20px #17352a0b;margin-bottom:18px}
+.progress{height:8px;background:#e5eee9;border-radius:99px;overflow:hidden;margin-top:14px}.bar{height:100%;width:0;background:var(--g2)}
+.ayah{background:#fff;border:1px solid #e3ebe6;border-radius:18px;padding:22px;margin:13px 0;box-shadow:0 5px 18px #17352a08}
+.n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#e9f6ef;color:var(--g2);font-weight:800;margin-bottom:13px}
+.ar{direction:rtl;text-align:right;font-family:"Noto Naskh Arabic","Amiri",serif;font-size:30px;line-height:2.15}
+.label{font-size:13px;color:var(--g2);font-weight:800;margin:18px 0 6px}.hi{font-size:18px;line-height:1.9}
+.source{background:#f2ecda;border:1px solid #e5d9b7;border-radius:16px;padding:18px;margin-top:25px;font-size:14px;line-height:1.7}
+footer{background:#083f30;color:#d8e9e2;text-align:center;padding:30px 15px}footer strong{color:#f1d98d}
+.loading{text-align:center;padding:35px}.error{background:#fff1f1;border:1px solid #e8bcbc;padding:18px;border-radius:15px;color:#8b3030}
+.top{position:fixed;right:16px;bottom:18px;border:0;border-radius:50%;width:46px;height:46px;background:var(--g);color:#fff;font-size:20px;display:none}
+@media(max-width:600px){h1{font-size:29px}.ar{font-size:27px}.hi{font-size:17px}}
+</style></head>
+<body>
+<header><div class="moon">☾ ✦ 📖 ✦ ☽</div>
+<div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+<h1>सूरह अल-बक़रह</h1><div class="sub">Surah Al-Baqarah • Surah 2 • 286 Ayat</div></header>
+<main class="wrap">
+<a class="back" href="index.html">← Quran ki Surah List par wapas</a>
+<div class="info"><h2 style="margin:0 0 7px">📖 Al-Baqarah</h2><div>Arabic Quran + Hindi translation</div>
+<div class="progress"><div id="bar" class="bar"></div></div></div>
+<div id="content" class="loading">🤲 Surah ka matn load ho raha hai...</div>
+<div class="source"><strong>Translation source:</strong> Hindi Translation — Azizul Haq Al-Omari, QuranEnc.com.<br>
+Translation ko publisher/source aur version attribution ke saath display kiya ja raha hai.</div>
+</main>
+<footer><div style="font-size:23px">☾ ✦ 📖 ✦ ☽</div><strong>Aasan Hindi Quran</strong>
+<p style="margin:8px 0 0">❤️ Allah ki raza ke liye • Website Design by Azhar</p></footer>
+<button id="top" class="top" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+const content=document.getElementById("content"),bar=document.getElementById("bar");
+async function loadQuran(){
+try{
+const [arRes,hiRes]=await Promise.all([
+fetch("https://api.alquran.cloud/v1/surah/2/quran-uthmani"),
+fetch("https://quranenc.com/api/v1/translation/sura/hindi_omari/2")
+]);
+if(!arRes.ok||!hiRes.ok)throw new Error();
+const ar=await arRes.json(),hi=await hiRes.json();
+const arabic=ar.data.ayahs,hindi=Array.isArray(hi)?hi:hi.data;
+if(!arabic||!hindi||arabic.length!==286||hindi.length!==286)throw new Error();
+content.className="";content.innerHTML="";
+arabic.forEach((a,i)=>{
+const card=document.createElement("article");card.className="ayah";
+card.innerHTML='<div class="n">'+(i+1)+'</div><div class="ar">'+a.text+'</div><div class="label">हिंदी अनुवाद</div><div class="hi">'+(hindi[i].translation||"")+'</div>';
+content.appendChild(card);
+});
+}catch(e){content.className="error";content.innerHTML="❌ Surah load nahi ho saki. Internet connection check karke page refresh karein."}
+}
+loadQuran();
+window.addEventListener("scroll",()=>{
+document.getElementById("top").style.display=scrollY>500?"block":"none";
+const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=max>0?(scrollY/max*100)+"%":"0";
+});
+</script></body></html>
